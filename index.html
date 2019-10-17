@@ -1,80 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head prefix="foaf: http://xmlns.com/foaf/0.1/">
-    <title>SOCOM Tutorial Slides - LDflex</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="node_modules/shower-material/styles/styles.css">
-    <link rel="stylesheet" href="styles/comunica-custom.css" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
-    
-    <link rel="foaf:maker" href="https://www.rubensworks.net/#me" />
+<head prefix="foaf: http://xmlns.com/foaf/0.1/">
+  <title>SOCOM Tutorial Slides - LDflex</title>
 
-    <style>
-      .shower {
-        --slide-ratio: calc(16 / 9);
-      }
-    </style>
-  </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="node_modules/shower-material/styles/styles.css">
+  <link rel="stylesheet" href="styles/comunica-custom.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
 
-  <body class="shower list" prefix="org: http://www.w3.org/ns/org# cite: http://purl.org/spar/cito/" typeof="schema:PresentationDigitalDocument">
-    <header class="caption">
-      <div class="title">
-        <h1 property="schema:name">SOCOM Tutorial Slides - LDflex</h1>
-      </div>
-      <div class="captiondata">
-        <p class="author" rel="schema:author"><a href="https://data.verborgh.org/people/julian_rojas_melendez">Julian Rojas</a>, <a href="https://www.rubensworks.net/#me">Ruben Taelman</a></p>
-        <p class="venue">
-          <a href="https://iswc2019.semanticweb.org/">ISWC 2019, Auckland</a>, <span rel="schema:datePublished">26 October 2019</span></a>
-        </p>
-      </div>
-    </header>
+  <link rel="foaf:maker" href="https://www.rubensworks.net/#me" />
 
-    <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
-      <h2 property="schema:name">SOCOM Tutorial Slides - LDflex</h2>
-      <ul class="author inline">
-          <li class="current">Julian Rojas</li>
-          <li class="current"><a href="https://www.rubensworks.net/">Ruben Taelman</a></li>
-      </ul>
-      <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
-      <h3>Tutorial Website: <a href="http://bit.ly/iswcquery">http://bit.ly/iswcquery</a></h3>
-    </section>
-    
-    <section id="start" class="slide" inlist="" rel="schema:hasPart" resource="#start">
-        <h2 property="schema:name" class="big">Some title</h2>
-        <ul>
-            <li>
-                Something else
-            </li>
-        </ul>
-    </section>
-    
-    <section id="index" class="slide index">
-      <ul>
-        <li><a href="#index-a">Part A</a></li>
-        <li><a href="#index-b">Part B</a></li>
-        <li><a href="#index-c">Part C</a></li>
-      </ul>
-    </section>
-    
-    <section id="index-a" class="slide index">
-      <ul>
-        <li class="current"><a href="#index-a">Part A</a></li>
-        <li><a href="#index-b">Part B</a></li>
-        <li><a href="#index-c">Part C</a></li>
-      </ul>
-    </section>
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
 
-    <footer>
-      <p class="license">
-            &#169; <span property="schema:copyrightYear">2019</span> Julian Rojas, <a href="https://www.rubensworks.net" rel="schema:copyrightHolder"><span resource="https://www.rubensworks.net/#me">Ruben Taelman</span></a>
-            — <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">Creative Commons Attribution 4.0</a>, unless otherwise indicated.
+<body class="shower list" prefix="org: http://www.w3.org/ns/org# cite: http://purl.org/spar/cito/"
+  typeof="schema:PresentationDigitalDocument">
+  <header class="caption">
+    <div class="title">
+      <h1 property="schema:name">SOCOM Tutorial Slides - LDflex</h1>
+    </div>
+    <div class="captiondata">
+      <p class="author" rel="schema:author"><a href="https://data.verborgh.org/people/julian_rojas_melendez">Julian
+          Rojas</a>, <a href="https://www.rubensworks.net/#me">Ruben Taelman</a></p>
+      <p class="venue">
+        <a href="https://iswc2019.semanticweb.org/">ISWC 2019, Auckland</a>, <span rel="schema:datePublished">26 October
+          2019</span></a>
       </p>
-      <a href="https://github.com/comunica/Tutorial-ISWC2019-Slides-LDflex">Source</a>
-    </footer>
+    </div>
+  </header>
 
-    <script src="node_modules/shower-core/shower.min.js"></script>
-  </body>
+  <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
+    <h2 property="schema:name">SOCOM Tutorial Slides - LDflex</h2>
+    <ul class="author inline">
+      <li class="current">Julian Rojas</li>
+      <li class="current"><a href="https://www.rubensworks.net/">Ruben Taelman</a></li>
+    </ul>
+    <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
+    <h3>Tutorial Website: <a href="http://bit.ly/iswcquery">http://bit.ly/iswcquery</a></h3>
+  </section>
+
+  <section id="schedule" class="slide" inlist="" rel="schema:hasPart" resource="#schedule">
+    <h2 property="schema:name" class="big">LDflex Tutorial</h2>
+    <ul>
+      <li><strong>First part: Introduction to LDflex</strong></li>
+      <br />
+      <li><strong>Second part: Hands-on</strong>
+        <ul style="margin-top: 10px;">
+          <li>1. LDflex playground</li>
+          <li>2. LDflex via React Components</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="definition" class="slide">
+    <h2 property="schema:name" class="big">What is LDflex?</h2>
+    <ul>
+      <li>A JavaScript-like domain-specific language for simple Linked Data querying using path-based expressions</li>
+      <li style="text-align: center;">
+        <img src="img/js-logo.svg" style="max-width:10%; padding-top: 30px; padding-right: 150px;" />
+        <img src="img/rdf-logo.png" style="max-width:10%;" />
+      </li>
+    </ul>
+  </section>
+
+  <section id="query-example-1" class="slide">
+    <h2 property="schema:name" class="big">Traverse Linked Data as JS objects</h2>
+    <pre style="font-size: 16px;">
+            [https://julianrojas.org/#me].name<span style="color: lightslategray"> // "Julián Rojas"</span>
+      </pre>
+    <div style="text-align: center">
+      <img src="img/kg-example-1.svg" style="width: 35%; margin-top: 40px;" />
+    </div>
+  </section>
+
+  <section id="query-example-2" class="slide">
+    <h2 property="schema:name" class="big">Traverse Linked Data as JS objects</h2>
+
+    <div>
+      <pre style="font-size: 16px;">
+          [https://julianrojas.org/#me].name<span style="color: lightslategray"> // "Julián Rojas"</span>
+  
+          [https://julianrojas.org/#me].friends.name<span style="color: lightslategray"> // ["Ruben Verborgh", "Ruben Taelman", ...]</span>
+      </pre>
+    </div>
+    <div style="text-align: center">
+      <img src="img/kg-example-2.svg" style="width: 80%;" />
+    </div>
+  </section>
+
+  <section id="how-it-works" class="slide">
+    <h2 property="schema:name" class="big">How does it work?</h2>
+    <p>
+      Thanks to <a style="color:blue" href="https://github.com/solid/context/blob/master/context.json">JSON-LD
+        contexts</a>
+      and <a style="color:blue"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy"
+        target="_blank">JavaScript Proxies</a> we can treat Linked Data graphs as local objects
+    </p>
+  </section>
+
+  <section id="json-ld-contexts" class="slide">
+    <h2 property="schema:name" class="big">JSON-LD contexts for semantics</h2>
+    <ul>
+      <li>
+        JSON-LD contexts provide unambiguous semantics to access data. For example this:
+        <pre style="font-size: 16px;">
+            {
+              <span style="color: gray">"@context"</span>: {
+                "foaf": <span style="color: #690">"http://xmlns.com/foaf/0.1/"</span>,
+                "name": <span style="color: #690">"foaf:name"</span>,
+                "friends": <span style="color: #690">"foaf:knows"</span>,
+                ...
+              }
+            }
+          </pre>
+      </li>
+      <li>
+        Allows this:
+        <pre style="font-size: 16px;">
+          [something].name === [something][http://xmlns.com/foaf/0.1/name]
+        </pre>
+      </li>
+    </ul>
+  </section>
+
+  <section id="javascript-proxies" class="slide">
+    <h2 property="schema:name" class="big">Transparent data access</h2>
+    <p>
+      JavaScript Proxies enable LDflex processors to translate <em>path expressions</em> to SPARQL queries and resolve
+      them through a query engine (e.g. Comunica)
+    </p>
+    <ul>
+      <li>
+        <pre style="font-size: 16px;">
+              [https://julianrojas.org/#me].name  
+        </pre>
+      </li>
+      <li style="text-align: center">
+        <img src="img/comunica.png" style="max-width:10%;" />
+      </li>
+      <li>
+        <pre style="font-size: 16px;">
+              SELECT ?name WHERE {
+                &lt;https://julianrojas.org/#me&gt; &lt;http://xmlns.com/foaf/0.1/name&gt; ?name.
+              }
+        </pre>
+      </li>
+    </ul>
+  </section>
+
+  <section id="hands-on-1" class="slide">
+    <h2 property="schema:name">Hands-on 1: LDflex playground</h2>
+    <p class="indent">Find the play ground at <a style="color: blue" href="https://solid.github.io/ldflex-playground"
+        target="_blank">https://solid.github.io/ldflex-playground</a></p>
+  </section>
+
+  <section id="hands-on-2" class="slide">
+    <h2 property="schema:name">Hands-on 2: LDflex via React components</h2>
+    <p class="indent"><strong>Goal:</strong> Cover the basics on building React applications that use LDflex to query
+      Knowledge Graphs on the Web.</p>
+    <p class="indent">
+      This tutorial will introduce how to reuse existing React components that use LDflex
+    </p>
+    <p class="indent">
+      It will also introduce how can you create your own components that query Knowledge Graphs on the Web
+    </p>
+    <p class="indent">
+      No advanced JavaScript or React knowledge required, we start from scratch
+    </p>
+  </section>
+
+  <section id="hands-on-2-requirements" class="slide" inlist="" rel="schema:hasPart"
+    resource="#querying-data-requirements">
+    <h2 property="schema:name">Hands-on: requirements</h2>
+    <ul>
+      <li><a href="https://git-scm.com/">git</a>: <span class="muted">cloning the starting code</span></li>
+      <li><a href="https://nodejs.org/en/">Node.js</a> <em>(version 8.0 or higher)</em>: <span class="muted">running the
+          code</span></li>
+      <li>A JavaScript editor <em>(we will use <a href="https://code.visualstudio.com/">Visual Studio Code</a>)</em>:
+        <span class="muted">editing the code</span></li>
+    </ul>
+  </section>
+
+  <section id="hands-on-2-start" class="slide" inlist="" rel="schema:hasPart" resource="#">
+    <h2 property="schema:name">Hands-on 2: getting started</h2>
+    <p class="indent">Each step is explained in detail on the GitHub wiki:</p>
+    <p class="center">
+      <strong><a
+          href="https://github.com/solid/profile-viewer-react">TODO: Provide link to step by step wiki based on https://github.com/solid/profile-viewer-react</a></strong>
+    </p>
+  </section>
+
+  <footer>
+    <p class="license">
+      &#169; <span property="schema:copyrightYear">2019</span> Julian Rojas, <a href="https://www.rubensworks.net"
+        rel="schema:copyrightHolder"><span resource="https://www.rubensworks.net/#me">Ruben Taelman</span></a>
+      — <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">Creative Commons
+        Attribution 4.0</a>, unless otherwise indicated.
+    </p>
+    <a href="https://github.com/comunica/Tutorial-ISWC2019-Slides-LDflex">Source</a>
+  </footer>
+
+  <script src="node_modules/shower-core/shower.min.js"></script>
+</body>
+
 </html>
