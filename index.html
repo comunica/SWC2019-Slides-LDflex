@@ -54,7 +54,7 @@
       <li><strong>Second part: Hands-on</strong>
         <ul style="margin-top: 10px;">
           <li>1. LDflex playground</li>
-          <li>2. LDflex via React Components</li>
+          <li>2. LDflex on React</li>
         </ul>
       </li>
     </ul>
@@ -74,7 +74,7 @@
   <section id="query-example-1" class="slide">
     <h2 property="schema:name" class="big">Traverse Linked Data as JS objects</h2>
     <pre style="font-size: 16px;">
-            [https://julianrojas.org/#me].name<span style="color: lightslategray"> // "Julián Rojas"</span>
+            [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
       </pre>
     <div style="text-align: center">
       <img src="img/kg-example-1.svg" style="width: 35%; margin-top: 40px;" />
@@ -86,9 +86,9 @@
 
     <div>
       <pre style="font-size: 16px;">
-          [https://julianrojas.org/#me].name<span style="color: lightslategray"> // "Julián Rojas"</span>
+          [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
   
-          [https://julianrojas.org/#me].friends.name<span style="color: lightslategray"> // ["Ruben Verborgh", "Ruben Taelman", ...]</span>
+          [https://julianrojas.org/#me].<span style="color: blueviolet">friends</span>.<span style="color: blueviolet">name</span><span style="color: lightslategray"> // ["Ruben Verborgh", "Ruben Taelman", ...]</span>
       </pre>
     </div>
     <div style="text-align: center">
@@ -126,7 +126,7 @@
       <li>
         Allows this:
         <pre style="font-size: 16px;">
-          [something].name === [something][http://xmlns.com/foaf/0.1/name]
+          [something].<span style="color: blueviolet">name</span> === [something][http://xmlns.com/foaf/0.1/name]
         </pre>
       </li>
     </ul>
@@ -141,7 +141,7 @@
     <ul>
       <li>
         <pre style="font-size: 16px;">
-              [https://julianrojas.org/#me].name  
+              [https://julianrojas.org/#me].<span style="color: blueviolet">name</span>  
         </pre>
       </li>
       <li style="text-align: center">
@@ -157,21 +157,53 @@
     </ul>
   </section>
 
+  <section id="write-support" class="slide">
+    <h2 property="schema:name" class="big">Support for data writing</h2>
+    <p class="indent">LDflex allows for writing/updating knowledge graphs that support SPARQL UPDATE operations such as
+      SPARQL endpoints and Solid pods.</p>
+    <p class="indent">
+      <span>For example this expression:</span>
+      <pre style="font-size: 16px;">
+        [https://julianrojas.solid.org/profile/#me].<span style="color: blue">add</span>(<span style="color: coral;">'foaf:givenName'</span> , <span style="color: coral;">'Julian'</span>);
+      </pre>
+    </p>
+    <p class="indent">
+      <span>Will be translated to this SPARQL UPDATE query:</span>
+      <pre style="font-size: 16px;">
+        INSERT DATA {
+          &lt;https://julianrojas.solid.org/profile/#me&gt; 
+            &lt;http://xmlns.com/foaf/0.1/givenName&gt; "Julian".
+        }
+      </pre>
+    </p>
+  </section>
+
+  <section id="solid-auth-client" class="slide">
+    <h2 property="schema:name" class="big">LDFlex is Solid compliant</h2>
+    <p class="indent">Through Comunica, LDflex uses the <a style="color: blue"
+        href="https://github.com/solid/solid-auth-client" target="_blank">solid-auth-client</a> to ensure that only
+      authorized clients can read/write data from/to Solid pods</p>
+    <ul>
+      <li style="text-align: center;">
+        <img src="img/comunica.png" style="max-width:20%; padding-top: 30px; padding-right: 150px;" />
+        <img src="img/solid-logo.svg" style="max-width:20%;" />
+      </li>
+    </ul>
+  </section>
+
   <section id="hands-on-1" class="slide">
-    <h2 property="schema:name">Hands-on 1: LDflex playground</h2>
+    <h2 property="schema:name" class="big">Hands-on 1: LDflex playground</h2>
     <p class="indent">Find the play ground at <a style="color: blue" href="https://solid.github.io/ldflex-playground"
         target="_blank">https://solid.github.io/ldflex-playground</a></p>
   </section>
 
   <section id="hands-on-2" class="slide">
-    <h2 property="schema:name">Hands-on 2: LDflex via React components</h2>
+    <h2 property="schema:name" class="big">Hands-on 2: LDflex on React</h2>
     <p class="indent"><strong>Goal:</strong> Cover the basics on building React applications that use LDflex to query
       Knowledge Graphs on the Web.</p>
     <p class="indent">
-      This tutorial will introduce how to reuse existing React components that use LDflex
-    </p>
-    <p class="indent">
-      It will also introduce how can you create your own components that query Knowledge Graphs on the Web
+      This tutorial will introduce how to reuse existing <strong>React components</strong> that use LDflex.
+      It will also introduce how can you create your own components that query Knowledge Graphs on the Web.
     </p>
     <p class="indent">
       No advanced JavaScript or React knowledge required, we start from scratch
@@ -180,7 +212,7 @@
 
   <section id="hands-on-2-requirements" class="slide" inlist="" rel="schema:hasPart"
     resource="#querying-data-requirements">
-    <h2 property="schema:name">Hands-on: requirements</h2>
+    <h2 property="schema:name" class="big">Hands-on: requirements</h2>
     <ul>
       <li><a href="https://git-scm.com/">git</a>: <span class="muted">cloning the starting code</span></li>
       <li><a href="https://nodejs.org/en/">Node.js</a> <em>(version 8.0 or higher)</em>: <span class="muted">running the
@@ -191,11 +223,11 @@
   </section>
 
   <section id="hands-on-2-start" class="slide" inlist="" rel="schema:hasPart" resource="#">
-    <h2 property="schema:name">Hands-on 2: getting started</h2>
+    <h2 property="schema:name" class="big">Hands-on 2: getting started</h2>
     <p class="indent">Each step is explained in detail on the GitHub wiki:</p>
     <p class="center">
-      <strong><a
-          href="https://github.com/solid/profile-viewer-react">TODO: Provide link to step by step wiki based on https://github.com/solid/profile-viewer-react</a></strong>
+      <strong><a href="https://github.com/solid/profile-viewer-react">TODO: Provide link to step by step wiki based on
+          https://github.com/solid/profile-viewer-react</a></strong>
     </p>
   </section>
 
