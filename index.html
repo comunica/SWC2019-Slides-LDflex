@@ -74,7 +74,7 @@
   <section id="query-example-1" class="slide">
     <h2 property="schema:name" class="big">Traverse Linked Data as JS objects</h2>
     <pre style="font-size: 16px;">
-            [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
+            await [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
       </pre>
     <div style="text-align: center">
       <img src="img/kg-example-1.svg" style="width: 35%; margin-top: 40px;" />
@@ -86,9 +86,9 @@
 
     <div>
       <pre style="font-size: 16px;">
-          [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
+          await [https://julianrojas.org/#me].<span style="color: blueviolet">name</span><span style="color: lightslategray"> // "Julián Rojas"</span>
   
-          [https://julianrojas.org/#me].<span style="color: blueviolet">friends</span>.<span style="color: blueviolet">name</span><span style="color: lightslategray"> // ["Ruben Verborgh", "Ruben Taelman", ...]</span>
+          await [https://julianrojas.org/#me].<span style="color: blueviolet">friends</span>.<span style="color: blueviolet">name</span><span style="color: lightslategray"> // ["Ruben Verborgh", "Ruben Taelman", ...]</span>
       </pre>
     </div>
     <div style="text-align: center">
@@ -105,6 +105,9 @@
         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy"
         target="_blank">JavaScript Proxies</a> we can treat Linked Data graphs as local objects
     </p>
+	<p>
+	  The <code>await</code> keyword allows waiting for remote HTTP requests
+	</p>
   </section>
 
   <section id="json-ld-contexts" class="slide">
@@ -141,7 +144,7 @@
     <ul>
       <li>
         <pre style="font-size: 16px;">
-              [https://julianrojas.org/#me].<span style="color: blueviolet">name</span>  
+              await [https://julianrojas.org/#me].<span style="color: blueviolet">name</span>  
         </pre>
       </li>
       <li style="text-align: center">
@@ -164,7 +167,7 @@
     <p class="indent">
       <span>For example this expression:</span>
       <pre style="font-size: 16px;">
-        [https://julianrojas.solid.org/profile/#me].<span style="color: blue">add</span>(<span style="color: coral;">'foaf:givenName'</span> , <span style="color: coral;">'Julian'</span>);
+        await [https://julianrojas.solid.org/profile/#me].<span style="color: blue">add</span>(<span style="color: coral;">'foaf:givenName'</span> , <span style="color: coral;">'Julian'</span>);
       </pre>
     </p>
     <p class="indent">
